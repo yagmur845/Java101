@@ -1,0 +1,19 @@
+/*Dik Üçgende Hipotenüs Bulan Program
+Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesaplayan programı yazın.
+*/
+
+import java.util.Scanner;
+
+public class a3 {
+    public static void main(String[] args) {
+
+        Scanner input= new Scanner(System.in) ;
+        System.out.println("Dikey dik kenarı gir:");
+        int dikey= input.nextInt();
+        System.out.println("Yatay dik kenarı gir:");
+        int yatay= input.nextInt();
+
+        double hipotenus= Math.sqrt(dikey*dikey+yatay*yatay);
+        System.out.println("Hiptenus:"+hipotenus);
+    }
+}
