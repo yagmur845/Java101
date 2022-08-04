@@ -1,0 +1,28 @@
+/* Not Ortalaması Hesaplayan Program
+Java ile Matematik, Fen, Türkçe, Sosyal derslerinin sınav puanlarını kullanıcıdan
+alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
+Eğer kullanıcının ortalaması 60'dan büyük ise ekrana "Sınıfı Geçti" , küçük ise "Sınıfta Kaldı" yazsın.
+ */
+
+
+import java.util.Scanner;
+public class a1 {
+    public static void main(String[] args) {
+        int mat, turkce, fen, sosyal;
+        Scanner input= new Scanner(System.in);
+
+        System.out.println("Matematik:");
+        mat = input.nextInt();
+        System.out.println("Türkçe:");
+        turkce = input.nextInt();
+        System.out.println("Fen Bilimleri:");
+        fen = input.nextInt();
+        System.out.println("Sosyal Bilimler:");
+        sosyal = input.nextInt();
+        double ort= (mat+fen+turkce+sosyal)/4;
+        System.out.println("ortalama:"+ort);
+
+        System.out.println(ort>60 ? "Geçti" :" Kaldı");
+
+    }
+}
