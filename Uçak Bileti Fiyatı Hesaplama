@@ -1,0 +1,62 @@
+
+import java.util.Scanner;
+public class ucakbilet {
+
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+
+        System.out.println("Mesafeyi km türünden giriniz :");
+        int km= input.nextInt();
+
+        System.out.println("Yaşınızı giriniz :");
+        int age= input.nextInt();
+
+        System.out.println("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ):");
+        int type= input.nextInt();
+        
+        Double tutar = 1.0;
+
+        if(age<12){
+            if (type==1){
+                tutar=(km*0.10)*0.50;
+            }
+            else if (type==2){
+                tutar=(2*(km*0.10)*0.50)*0.80;
+            }
+         }
+
+        else if(24>age && age>12){
+            if (type==1){
+                tutar=(km*0.10)*0.90;
+            }
+            else if (type==2){
+                tutar=2*km*0.10*0.90*0.80;
+            }
+        }
+
+        else if(age >24 &&age<65){
+            if (type==1){
+                tutar=(km*0.10);
+            }
+            else if (type==2){
+                tutar=2*km*0.10*0.80;
+            }
+
+        }
+        else if(age>65 ){
+            if (type==1){
+                tutar=(km*0.10)*0.70;
+            }
+            else if (type==2){
+                tutar=2*km*0.10*0.70*0.80;
+            }
+        }
+
+        if(age<0||km<0|| (type<1||type>2))
+            System.out.println("Hatalı Veri");
+        else
+            System.out.println("Tutar:"+tutar);
+
+
+    }
+}
