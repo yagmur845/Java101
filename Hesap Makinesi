@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Hesapmakinesi {
+    public static void main(String[] args) {
+        int n1,n2,islem,sonuc = 0;
+        Scanner input=new Scanner(System.in);
+
+        System.out.println("1.sayi:");
+        n1=input.nextInt();
+        System.out.println("2.sayi:");
+        n2=input.nextInt();
+
+        System.out.println("1-Toplama\n2-Cıkara\n3-Çarpma\n4-Bölme");
+        islem=input.nextInt();
+/*
+        if(islem==1)
+            sonuc=n1+n2;
+        else if(islem==2)
+            sonuc=n1-n2;
+        else if(islem==3)
+            sonuc=n1*n2;
+        else if(islem==4)
+            sonuc=n1/n2;
+            //yeni if ekleyip bölme ile 0 seçilemeyeciğine dair dönüt ver
+        else
+            System.out.println("Böyle bir işlem bulunmamakta");
+        System.out.println("Sonuc:"+sonuc);
+*/
+
+        switch(islem) {
+            case 1:
+                sonuc=n1+n2;
+                break;
+            case 2:
+                sonuc=n1-n2;
+                break;
+            case 3:
+                sonuc=n1*n2;
+                break;
+            case 4:
+                sonuc=n1/n2;
+                break;
+            default:
+                System.out.println("Böyle bir işlem bulunmamakta");
+        }
+        System.out.println("Sonuc:"+sonuc);
+
+    }
+}
