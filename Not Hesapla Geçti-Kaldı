@@ -1,0 +1,51 @@
+package Pratik;
+import java.util.Scanner;
+
+public class not {
+    public static void main(String[] args) {
+        int mat, turkce, fen, sosyal,sayac=0;
+        Scanner input= new Scanner(System.in);
+        double ort=0;
+
+        System.out.println("Matematik:");
+        mat = input.nextInt();
+        if (mat<0 ||mat>100)
+            System.out.println("notunuzu lütfen 0-100 aralığında olmadığında ortalamaya katılmaz");
+        else {
+            ort += mat;
+            sayac += 1;
+            }
+        System.out.println("Türkçe:");
+        turkce = input.nextInt();
+        if (turkce<0 ||turkce>100)
+            System.out.println("notunuzu lütfen 0-100 aralığında olmadığında ortalamaya katılmaz");
+        else{
+            ort+=turkce;
+            sayac+=1;
+            }
+        System.out.println("Fen Bilimleri:");
+        fen = input.nextInt();
+        if (fen<0 ||fen>100)
+            System.out.println("notunuzu lütfen 0-100 aralığında olmadığında ortalamaya katılmaz");
+        else{
+            ort+=fen;
+        sayac+=1;
+            }
+
+        System.out.println("Sosyal Bilimler:");
+        sosyal = input.nextInt();
+        if (sosyal<0 ||sosyal>100)
+            System.out.println("notunuzu lütfen 0-100 aralığında olmadığında ortalamaya katılmaz");
+        else {
+            ort += sosyal;
+            sayac+=1;
+        }
+        ort=ort/sayac;
+        System.out.println("ortalama:"+ort);
+
+        if(ort>55)
+            System.out.println("geçti");
+        else
+            System.out.println("kaldı");
+    }
+}
