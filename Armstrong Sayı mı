@@ -1,0 +1,35 @@
+package Pratik;
+import java.util.Scanner;
+
+public class Armstrongsayilar {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Sayı");
+
+        int i=input.nextInt();
+        int a=i,b=i;
+                double bassay=0,bas,t,total=0;
+
+        while (i != 0) {
+            i /= 10;
+            bassay++;
+        }
+        System.out.println(bassay);
+
+        while (a!=0){
+            bas=a%10;
+            a/=10;
+            t=Math.pow(bas,bassay);
+            total=t+total;
+        }
+        if (total==b)
+            System.out.println("Armstrong Sayıdır");
+        else 
+            System.out.println("Armstrong Sayı Değildir");
+
+
+
+
+
+    }
+}
