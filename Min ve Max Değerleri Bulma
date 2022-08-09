@@ -1,0 +1,42 @@
+package Pratik;
+import java.util.Scanner;
+
+public class minmaxbulma {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Kaç sayı girceksiniz;");
+        int sayi= input.nextInt();
+
+
+        System.out.println("1. sayıyı giriniz");
+        int a= input.nextInt();
+        System.out.println("2. sayıyı giriniz");
+        int b= input.nextInt();
+        int min;
+        int max;
+
+        if(a>b){
+             min=b;
+             max=a;
+        }
+        else{
+             min=a;
+             max=b;
+        }
+
+        for(int i=3;i<=sayi;i++){
+            System.out.println(i+". sayıyı giriniz");
+            int k= input.nextInt();
+            if (k>max){
+                max=k;
+            }
+            else if(k<min){
+                min=k;
+            }
+        }
+
+        System.out.println("Max:"+max);
+        System.out.println("Min:"+min);
+
+    }
+}
